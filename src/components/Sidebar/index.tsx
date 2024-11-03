@@ -25,16 +25,12 @@ const menuGroups = [
     name: "MAIN MENU",
     menuItems: [
       {
-        icon: (
-          <TbSmartHome size={24}/>
-        ),
+        icon: <TbSmartHome size={24} />,
         label: "Dashboard",
         route: "/",
       },
       {
-        icon: (
-          <MdOutlineWorkOutline size={24}/>
-        ),
+        icon: <MdOutlineWorkOutline size={24} />,
         label: "Contractors",
         route: "/forms/form-layout",
         // children: [
@@ -43,16 +39,12 @@ const menuGroups = [
         // ],
       },
       {
-        icon: (
-          <GrProjects size={24}/>
-        ),
+        icon: <GrProjects size={24} />,
         label: "Projects",
         route: "/tables",
       },
       {
-        icon: (
-          <TbReport size={24}/>
-        ),
+        icon: <TbReport size={24} />,
         label: "Reports",
         route: "/calendar",
       },
@@ -62,23 +54,17 @@ const menuGroups = [
     name: "OTHERS",
     menuItems: [
       {
-        icon: (
-          <FaRegUser size={24}/>
-        ),
+        icon: <FaRegUser size={24} />,
         label: "Profile",
         route: "/profile",
       },
       {
-        icon: (
-          <IoSettingsOutline size={24}/>
-        ),
+        icon: <IoSettingsOutline size={24} />,
         label: "Settings",
-        route: "/pages/settings",
+        route: "/settings",
       },
       {
-        icon: (
-          <BiLogOutCircle size={24}/>
-        ),
+        icon: <BiLogOutCircle size={24} />,
         label: "LogOut",
         route: "#",
       },
@@ -103,31 +89,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
           <Link href="/">
-            <Image
-              width={176}
-              height={32}
-              src={"/images/logo/logo-dark.svg"}
-              alt="Logo"
-              priority
-              className="dark:hidden"
-              style={{ width: "auto", height: "auto" }}
-            />
-            <Image
-              width={176}
-              height={32}
-              src={"/images/logo/logo.svg"}
-              alt="Logo"
-              priority
-              className="hidden dark:block"
-              style={{ width: "auto", height: "auto" }}
-            />
+            <h1 className="text-2xl font-black text-white">Logo</h1>
           </Link>
 
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="block lg:hidden"
           >
-            <AiOutlineClose size={24}/>
+            <AiOutlineClose size={24} color="white" />
           </button>
         </div>
         {/* <!-- SIDEBAR HEADER --> */}
