@@ -1,5 +1,6 @@
 import { BRAND } from "@/types/brand";
 import Image from "next/image";
+import Link from "next/link";
 
 const brandData: BRAND[] = [
   {
@@ -47,9 +48,14 @@ const brandData: BRAND[] = [
 const TableOne = () => {
   return (
     <div className="rounded-[10px] bg-white px-7.5 pb-4 pt-7.5 shadow-1 dark:bg-gray-dark dark:shadow-card">
-      <h4 className="mb-5.5 text-body-2xlg font-bold text-dark dark:text-white">
-        Top Channels
-      </h4>
+      <div className="mb-5.5 flex items-center justify-between">
+        <h4 className="text-body-2xlg font-bold text-dark dark:text-white">
+          Active Projects
+        </h4>
+        <Link href="#" className="text-lg font-medium text-blue-400">
+          See More
+        </Link>
+      </div>
 
       <div className="flex flex-col">
         <div className="grid grid-cols-3 sm:grid-cols-5">

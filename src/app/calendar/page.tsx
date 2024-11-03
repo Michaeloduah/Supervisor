@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const CalendarPage = () => {
   return (
     <DefaultLayout>
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto">
         <Breadcrumb pageName="Calendar" />
 
         <CalendarBox />

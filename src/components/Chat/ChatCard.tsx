@@ -54,9 +54,14 @@ const chatData: Chat[] = [
 const ChatCard = () => {
   return (
     <div className="col-span-12 rounded-[10px] bg-white py-6 shadow-1 dark:bg-gray-dark dark:shadow-card xl:col-span-4">
-      <h4 className="mb-5.5 px-7.5 text-body-2xlg font-bold text-dark dark:text-white">
-        Chats
-      </h4>
+      <div className="flex items-center justify-between mb-5.5 px-7.5">
+        <h4 className="text-body-2xlg font-bold text-dark dark:text-white">
+          Contractors
+        </h4>
+        <Link href="#" className="text-lg font-medium text-blue-400">
+          See More
+        </Link>
+      </div>
 
       <div>
         {chatData.map((chat, key) => (

@@ -12,11 +12,11 @@ const ProfileBox = () => {
             src="/images/cover/cover-01.png"
             alt="profile cover"
             className="h-full w-full rounded-tl-[10px] rounded-tr-[10px] object-cover object-center"
-            width={970}
+            width={100}
             height={260}
             style={{
-              width: "auto",
-              height: "auto",
+              width: "100%",
+              height: "260px",
             }}
           />
           <div className="absolute bottom-1 right-1 z-10 xsm:bottom-4 xsm:right-4">
@@ -97,8 +97,8 @@ const ProfileBox = () => {
             <h3 className="mb-1 text-heading-6 font-bold text-dark dark:text-white">
               Danish Heilium
             </h3>
-            <p className="font-medium">Ui/Ux Designer</p>
-            <div className="mx-auto mb-5.5 mt-5 grid max-w-[370px] grid-cols-3 rounded-[5px] border border-stroke py-[9px] shadow-1 dark:border-dark-3 dark:bg-dark-2 dark:shadow-card">
+            <p className="font-medium">Supervisor</p>
+            {/* <div className="mx-auto mb-5.5 mt-5 grid max-w-[370px] grid-cols-3 rounded-[5px] border border-stroke py-[9px] shadow-1 dark:border-dark-3 dark:bg-dark-2 dark:shadow-card">
               <div className="flex flex-col items-center justify-center gap-1 border-r border-stroke px-4 dark:border-dark-3 xsm:flex-row">
                 <span className="font-medium text-dark dark:text-white">
                   259
@@ -117,11 +117,11 @@ const ProfileBox = () => {
                 </span>
                 <span className="text-body-sm-sm">Following</span>
               </div>
-            </div>
+            </div> */}
 
             <div className="mx-auto max-w-[720px]">
               <h4 className="font-medium text-dark dark:text-white">
-                About Me
+                Bio
               </h4>
               <p className="mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
