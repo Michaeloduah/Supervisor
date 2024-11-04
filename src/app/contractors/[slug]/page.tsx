@@ -4,14 +4,17 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "ENSG PROJECT METER - Supervisor Dashboard",
-  description: "This is Next.js Home page for NextAdmin Dashboard Kit",
 };
 
 export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <></>
+        <>
+          <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
+            Contractor Details
+          </h1>
+        </>
       </DefaultLayout>
     </>
   );

@@ -220,7 +220,7 @@ const SettingBoxes = () => {
                     Cancel
                   </button>
                   <button
-                    className="flex justify-center rounded-[7px] bg-primary px-6 py-[7px] font-medium text-gray-2 hover:bg-opacity-90"
+                    className="flex justify-center rounded-[7px] bg-[#13802a] px-6 py-[7px] font-medium text-gray-2 hover:bg-opacity-90"
                     type="submit"
                   >
                     Save
@@ -259,7 +259,7 @@ const SettingBoxes = () => {
                       <button className="text-body-sm hover:text-red">
                         Delete
                       </button>
-                      <button className="text-body-sm hover:text-primary">
+                      <button className="text-body-sm hover:text-[#13802a]">
                         Update
                       </button>
                     </span>
@@ -314,7 +314,7 @@ const SettingBoxes = () => {
                     Cancel
                   </button>
                   <button
-                    className="flex items-center justify-center rounded-[7px] bg-primary px-6 py-[7px] font-medium text-gray-2 hover:bg-opacity-90"
+                    className="flex items-center justify-center rounded-[7px] bg-[#13802a] px-6 py-[7px] font-medium text-gray-2 hover:bg-opacity-90"
                     type="submit"
                   >
                     Save

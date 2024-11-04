@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ChatCard from "../Chat/ChatCard";
-import TableOne from "../Tables/TableOne";
+import ProjectTable from "../Tables/Projects";
 import DataStatsOne from "@/components/DataStats/DataStatsOne";
 // import ChartThree from "../Charts/ChartThree";
 // import ChartTwo from "../Charts/ChartTwo";
@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
         <ChartThree />
         <MapOne /> */}
         <div className="col-span-12 xl:col-span-8">
-          <TableOne />
+          <ProjectTable />
         </div>
         <ChatCard />
       </div>

@@ -5,7 +5,6 @@ import ProfileBox from "@/components/ProfileBox";
 
 export const metadata: Metadata = {
   title: "ENSG PROJECT METER - Supervisor Dashboard",
-  description: "This is Next.js Profile page for NextAdmin Dashboard Kit",
 };
 
 const Profile = () => {
