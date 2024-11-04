@@ -52,7 +52,7 @@ const TableOne = () => {
         <h4 className="text-body-2xlg font-bold text-dark dark:text-white">
           Active Projects
         </h4>
-        <Link href="#" className="text-lg font-medium text-blue-400">
+        <Link href="/projects" className="text-lg font-medium text-blue-400">
           See More
         </Link>
       </div>

@@ -58,7 +58,7 @@ const ChatCard = () => {
         <h4 className="text-body-2xlg font-bold text-dark dark:text-white">
           Contractors
         </h4>
-        <Link href="#" className="text-lg font-medium text-blue-400">
+        <Link href="/contractors" className="text-lg font-medium text-blue-400">
           See More
         </Link>
       </div>

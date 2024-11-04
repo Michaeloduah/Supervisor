@@ -4,46 +4,46 @@ import { dataStats } from "@/types/dataStats";
 import { GrProjects } from "react-icons/gr";
 import { TbReport } from "react-icons/tb";
 import { MdOutlineWorkOutline } from "react-icons/md";
+import { BsListTask } from "react-icons/bs";
 
 const dataStatsList = [
   {
-    icon: (
-      <GrProjects size={26} fill="#13802a"/>
-    ),
+    icon: <GrProjects size={26} fill="#13802a" />,
     color: "#3FD97F",
     title: "Projects",
     value: "18",
-    growthRate: 0.43,
+    route: "/projects",
   },
   {
-    icon: (
-      <TbReport size={26} fill="#13802a"/>
-    ),
-    color: "#FF9C55",
-    title: "Active Task",
-    value: "90",
-    growthRate: 4.35,
-  },
-  {
-    icon: (
-      <MdOutlineWorkOutline size={26} fill="#13802a"/>
-    ),
+    icon: <MdOutlineWorkOutline size={26} fill="#13802a" />,
     color: "#8155FF",
     title: "Contractors",
     value: "9",
-    growthRate: 2.59,
+    route: "/contractors",
+  },
+  {
+    icon: <BsListTask size={26} fill="#13802a" />,
+    color: "#FF9C55",
+    title: "Active Task",
+    value: "90",
+    route: "/tasks",
+  },
+  {
+    icon: <TbReport size={26} fill="#13802a" />,
+    color: "#FF9C55",
+    title: "Reports",
+    value: "45",
+    route: "/reports",
   },
 ];
 
 const DataStatsOne: React.FC<dataStats> = () => {
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-1 md:gap-6 xl:grid-cols-3 2xl:gap-7.5">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-1 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
         {dataStatsList.map((item, index) => (
-          <Link href="#" key={index}>
-            <div
-              className="bg-[#fff] rounded-[10px] p-6 shadow-1 dark:bg-gray-dark"
-            >
+          <Link href={item.route} key={index}>
+            <div className="rounded-[10px] bg-[#fff] p-6 shadow-1 dark:bg-gray-dark">
               <div
                 className="flex h-14.5 w-auto items-center justify-between rounded-full"
                 // style={{ backgroundColor: item.color }}

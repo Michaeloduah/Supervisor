@@ -13,6 +13,7 @@ import { GrProjects } from "react-icons/gr";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { BiLogOutCircle } from "react-icons/bi";
+import { BsListTask } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 
 interface SidebarProps {
@@ -47,6 +48,11 @@ const menuGroups = [
         icon: <TbReport size={24} />,
         label: "Reports",
         route: "/reports",
+      },
+      {
+        icon: <BsListTask size={24} />,
+        label: "Tasks",
+        route: "/tasks",
       },
     ],
   },
