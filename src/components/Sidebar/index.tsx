@@ -32,7 +32,7 @@ const menuGroups = [
       {
         icon: <MdOutlineWorkOutline size={24} />,
         label: "Contractors",
-        route: "/forms/form-layout",
+        route: "/contractors",
         // children: [
         //   { label: "Form Elements", route: "/forms/form-elements" },
         //   { label: "Form Layout", route: "/forms/form-layout" },
@@ -41,12 +41,12 @@ const menuGroups = [
       {
         icon: <GrProjects size={24} />,
         label: "Projects",
-        route: "/tables",
+        route: "/projects",
       },
       {
         icon: <TbReport size={24} />,
         label: "Reports",
-        route: "/calendar",
+        route: "/reports",
       },
     ],
   },
@@ -89,7 +89,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
           <Link href="/">
-            <h1 className="text-2xl font-black text-white">Logo</h1>
+            <Image
+              src={"/images/logo/ensg-logo.png"}
+              alt="Logo"
+              width={100}
+              height={100}
+            />
           </Link>
 
           <button

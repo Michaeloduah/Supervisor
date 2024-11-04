@@ -57,13 +57,12 @@ const Header = (props: {
           {/* <!-- Hamburger Toggle BTN --> */}
 
           <Link className="block flex-shrink-0 lg:hidden" href="/">
-            {/* <Image
-              width={32}
-              height={32}
-              src={"/images/logo/logo-icon.svg"}
+            <Image
+              src={"/images/logo/ensg-logo.png"}
               alt="Logo"
-            /> */}
-            <h1 className="text-2xl font-black text-white">Logo</h1>
+              width={100}
+              height={100}
+            />
           </Link>
         </div>
 
