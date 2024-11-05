@@ -12,7 +12,7 @@ export default function Home() {
       <DefaultLayout>
         <>
           <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
-            Contractor Details
+            Team Details
           </h1>
         </>
       </DefaultLayout>

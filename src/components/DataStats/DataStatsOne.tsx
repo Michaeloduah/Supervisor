@@ -17,9 +17,9 @@ const dataStatsList = [
   {
     icon: <MdOutlineWorkOutline size={26} fill="#13802a" />,
     color: "#8155FF",
-    title: "Contractors",
+    title: "Teams",
     value: "9",
-    route: "/contractors",
+    route: "/teams",
   },
   {
     icon: <BsListTask size={26} fill="#13802a" />,

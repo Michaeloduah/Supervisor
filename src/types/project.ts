@@ -18,7 +18,7 @@ export type PROJECT_DETAILS = {
   status: string;
   budget: string;
   expenditure: string;
-  contractor: string;
+  teams: string;
   projectManager: string;
   progress: number;
   remarks: string;

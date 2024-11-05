@@ -32,8 +32,8 @@ const menuGroups = [
       },
       {
         icon: <MdOutlineWorkOutline size={24} />,
-        label: "Contractors",
-        route: "/contractors",
+        label: "Teams",
+        route: "/teams",
         // children: [
         //   { label: "Form Elements", route: "/forms/form-elements" },
         //   { label: "Form Layout", route: "/forms/form-layout" },

@@ -10,7 +10,8 @@ const project = {
   status: "In Progress",
   budget: "15,000,000",
   expenditure: "7,500,000",
-  contractor: "Metro Build Co.",
+  team: "Metro Build Co.",
+  projectManager: "Jane Doe",
   progress: 50,
   remarks: "Project on track, minor delays expected due to weather conditions.",
 };
@@ -97,14 +98,14 @@ const ProjectDetailsPage = () => {
           <hr />
           <div className="flex justify-between">
             <span className="font-medium text-gray-600 dark:text-gray-400">
-              Contractor:
+              Teams:
             </span>
             <span className="font-semibold text-gray-900 dark:text-white">
-              {project.contractor}
+              {project.team}
             </span>
           </div>
           <hr />
-          {/* <div className="flex justify-between">
+          <div className="flex justify-between">
             <span className="font-medium text-gray-600 dark:text-gray-400">
               Project Manager:
             </span>
@@ -112,7 +113,7 @@ const ProjectDetailsPage = () => {
               {project.projectManager}
             </span>
           </div>
-          <hr /> */}
+          <hr />
           <div className="flex justify-between">
             <span className="font-medium text-gray-600 dark:text-gray-400">
               Progress:
