@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import TaskDetails from "@/components/Dashboard/TaskDetails";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -11,9 +12,7 @@ export default function Home() {
     <>
       <DefaultLayout>
         <>
-          <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
-            Task Details
-          </h1>
+          <TaskDetails />
         </>
       </DefaultLayout>
     </>

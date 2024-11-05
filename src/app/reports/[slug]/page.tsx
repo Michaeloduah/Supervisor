@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import ReportDetails from "@/components/Dashboard/ReportDetails";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -10,11 +11,7 @@ export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <>
-          <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
-            Report Details
-          </h1>
-        </>
+        <ReportDetails/>
       </DefaultLayout>
     </>
   );
