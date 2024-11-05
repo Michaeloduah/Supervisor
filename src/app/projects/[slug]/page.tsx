@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import ProjectDetails from "@/components/Dashboard/ProjectDetails";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import React from "react";
 
@@ -10,11 +11,7 @@ export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <>
-          <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
-            Project Details
-          </h1>
-        </>
+        <ProjectDetails />
       </DefaultLayout>
     </>
   );

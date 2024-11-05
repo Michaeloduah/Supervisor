@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { BRAND } from "@/types/brand";
+import { PROJECT } from "@/types/project";
 import Link from "next/link";
 
-const brandData: BRAND[] = [
+const projectData: PROJECT[] = [
   {
     id: 1,
     name: "Road Construction",
@@ -56,7 +56,7 @@ const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  const filteredData = brandData.filter((brand) =>
+  const filteredData = projectData.filter((brand) =>
     brand.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
@@ -161,7 +161,7 @@ const Projects = () => {
                 <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">
                   <Link href={"/projects/" + brand.id}>
                     <button className="cursor-pointer rounded-lg bg-[#13802a] p-3 font-medium text-white transition hover:bg-opacity-90">
-                      See Menu
+                      See More
                     </button>
                   </Link>
                 </td>
