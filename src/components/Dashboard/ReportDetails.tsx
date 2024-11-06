@@ -18,7 +18,7 @@ const report = {
   title: "Quarterly Progress Report - Q1 2024",
   description:
     "Summary of the project's progress, challenges, and budget expenditure for Q1.",
-  author: "John Doe",
+  task: "John Doe",
   department: "Department of Urban Development",
   submissionDate: "2024-04-15",
   reportType: "Progress Report",
@@ -83,10 +83,10 @@ const ReportDetailsPage = () => {
           <hr />
           <div className="flex justify-between">
             <span className="font-medium text-gray-600 dark:text-gray-400">
-              Author:
+              Task:
             </span>
             <span className="font-semibold text-gray-900 dark:text-white">
-              {report.author}
+              {report.task}
             </span>
           </div>
           <hr />

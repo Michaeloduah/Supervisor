@@ -66,7 +66,7 @@ const Reports = () => {
           <thead>
             <tr>
               <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 dark:text-white">Title</th>
-              <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 dark:text-white">Author</th>
+              <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 dark:text-white">Tasks</th>
               <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 dark:text-white">Department</th>
               <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 dark:text-white">Report Type</th>
               <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 dark:text-white">Status</th>
@@ -78,7 +78,7 @@ const Reports = () => {
             {currentData.map((report) => (
               <tr key={report.id}>
                 <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">{report.title}</td>
-                <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">{report.author}</td>
+                <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">{report.task}</td>
                 <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">{report.department}</td>
                 <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">{report.reportType}</td>
                 <td className="px-4 py-4 text-left font-medium text-gray-900 dark:text-white">{report.status}</td>
