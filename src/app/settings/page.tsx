@@ -5,7 +5,7 @@ import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import SettingBoxes from "@/components/SettingBoxes";
 
 export const metadata: Metadata = {
-  title: "Next.js Settings Page | NextAdmin - Next.js Dashboard c",
+  title: "ENSG PROJECT METER - Contractor Dashboard",
 };
 
 const Settings = () => {

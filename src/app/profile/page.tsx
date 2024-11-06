@@ -4,14 +4,14 @@ import DefaultLayout from "@/components/Layouts/DefaultLaout";
 import ProfileBox from "@/components/ProfileBox";
 
 export const metadata: Metadata = {
-  title: "ENSG PROJECT METER - Supervisor Dashboard",
+  title: "ENSG PROJECT METER - Contractor Dashboard",
 };
 
 const Profile = () => {
   return (
     <DefaultLayout>
       <div className="mx-auto w-full">
-        <Breadcrumb pageName="Profile" />
+        {/* <Breadcrumb pageName="Profile" /> */}
 
         <ProfileBox />
       </div>

@@ -4,7 +4,7 @@ import Teams from "@/components/Dashboard/Teams";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "ENSG PROJECT METER - Supervisor Dashboard",
+  title: "ENSG PROJECT METER - Contractor Dashboard",
 };
 
 export default function Home() {
