@@ -195,31 +195,29 @@ const EditDetailsForm: React.FC = () => {
         <div className="my-3 rounded-xl border p-3">
           <h3 className="mb-2 font-semibold">Certifications</h3>
           {certifications.map((cert, index) => (
-            <div className="mb-2 rounded-xl border p-3">
-              <div key={index} className="mb-4 ">
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Certification Name"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Issued By"
-                />
-                <input
-                  type="number"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Year"
-                />
-                <button
-                  type="button"
-                  className="ml-2 text-red-600"
-                  onClick={() => removeEntry(setCertifications, index)}
-                >
-                  Remove
-                </button>
-              </div>
+            <div key={index} className="mb-4 ">
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Certification Name"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Issued By"
+              />
+              <input
+                type="number"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Year"
+              />
+              <button
+                type="button"
+                className="ml-2 text-red-600"
+                onClick={() => removeEntry(setCertifications, index)}
+              >
+                Remove
+              </button>
             </div>
           ))}
           <button
@@ -237,40 +235,38 @@ const EditDetailsForm: React.FC = () => {
         <div className="my-3 rounded-xl border p-3">
           <h3 className="mb-2 font-semibold">Portfolio</h3>
           {portfolio.map((project, index) => (
-            <div className="mb-2 rounded-xl border p-3">
-              <div key={index} className="mb-4 ">
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Project Name"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Location"
-                />
-                <input
-                  type="date"
-                  className="mb-2 w-full rounded-md border p-2"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Description"
-                />
-                <input
-                  type="number"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Budget"
-                />
-                <button
-                  type="button"
-                  className="ml-2 text-red-600"
-                  onClick={() => removeEntry(setPortfolio, index)}
-                >
-                  Remove
-                </button>
-              </div>
+            <div key={index} className="mb-4 ">
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Project Name"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Location"
+              />
+              <input
+                type="date"
+                className="mb-2 w-full rounded-md border p-2"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Description"
+              />
+              <input
+                type="number"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Budget"
+              />
+              <button
+                type="button"
+                className="ml-2 text-red-600"
+                onClick={() => removeEntry(setPortfolio, index)}
+              >
+                Remove
+              </button>
             </div>
           ))}
           <button
@@ -294,34 +290,32 @@ const EditDetailsForm: React.FC = () => {
         <div className="my-3 rounded-xl border p-3">
           <h3 className="mb-2 font-semibold">Licenses</h3>
           {licenses.map((license, index) => (
-            <div className="mb-2 rounded-xl border p-3">
-              <div key={index} className="mb-4 ">
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="License Type"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Issued By"
-                />
-                <input
-                  type="date"
-                  className="mb-2 w-full rounded-md border p-2"
-                />
-                <input
-                  type="date"
-                  className="mb-2 w-full rounded-md border p-2"
-                />
-                <button
-                  type="button"
-                  className="ml-2 text-red-600"
-                  onClick={() => removeEntry(setLicenses, index)}
-                >
-                  Remove
-                </button>
-              </div>
+            <div key={index} className="mb-4 ">
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="License Type"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Issued By"
+              />
+              <input
+                type="date"
+                className="mb-2 w-full rounded-md border p-2"
+              />
+              <input
+                type="date"
+                className="mb-2 w-full rounded-md border p-2"
+              />
+              <button
+                type="button"
+                className="ml-2 text-red-600"
+                onClick={() => removeEntry(setLicenses, index)}
+              >
+                Remove
+              </button>
             </div>
           ))}
           <button
@@ -344,41 +338,39 @@ const EditDetailsForm: React.FC = () => {
         <div className="my-3 rounded-xl border p-3">
           <h3 className="mb-2 font-semibold">References</h3>
           {references.map((reference, index) => (
-            <div className="mb-2 rounded-xl border p-3">
-              <div key={index} className="mb-4 ">
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Reference Name"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Position"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Organization"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Contact"
-                />
-                <input
-                  type="email"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Email"
-                />
-                <button
-                  type="button"
-                  className="ml-2 text-red-600"
-                  onClick={() => removeEntry(setReferences, index)}
-                >
-                  Remove
-                </button>
-              </div>
+            <div key={index} className="mb-4 ">
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Reference Name"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Position"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Organization"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Contact"
+              />
+              <input
+                type="email"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Email"
+              />
+              <button
+                type="button"
+                className="ml-2 text-red-600"
+                onClick={() => removeEntry(setReferences, index)}
+              >
+                Remove
+              </button>
             </div>
           ))}
           <button
@@ -402,36 +394,34 @@ const EditDetailsForm: React.FC = () => {
         <div className="my-3 rounded-xl border p-3">
           <h3 className="mb-2 font-semibold">Bank Details</h3>
           {bankDetails.map((bank, index) => (
-            <div className="mb-2 rounded-xl border p-3">
-              <div key={index} className="mb-4 ">
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Bank Name"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Account Number"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Account Type"
-                />
-                <input
-                  type="text"
-                  className="mb-2 w-full rounded-md border p-2"
-                  placeholder="Bank Verification Number"
-                />
-                <button
-                  type="button"
-                  className="ml-2 text-red-600"
-                  onClick={() => removeEntry(setBankDetails, index)}
-                >
-                  Remove
-                </button>
-              </div>
+            <div key={index} className="mb-4 ">
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Bank Name"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Account Number"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Account Type"
+              />
+              <input
+                type="text"
+                className="mb-2 w-full rounded-md border p-2"
+                placeholder="Bank Verification Number"
+              />
+              <button
+                type="button"
+                className="ml-2 text-red-600"
+                onClick={() => removeEntry(setBankDetails, index)}
+              >
+                Remove
+              </button>
             </div>
           ))}
           <button
