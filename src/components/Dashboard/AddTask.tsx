@@ -39,29 +39,31 @@ const TaskForm: React.FC = () => {
       <form className="mx-auto rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
         {/* Title */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Title</label>
+          <label className="mb-1 block font-semibold" htmlFor="title">Title</label>
           <input
             type="text"
             onChange={(e) => setTitle(e.target.value)}
             className="w-full rounded border p-2"
+            name="title"
           />
         </div>
 
         {/* Description */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Description</label>
-          <textarea className="w-full rounded border p-2" />
+          <label className="mb-1 block font-semibold" htmlFor="description">Description</label>
+          <textarea className="w-full rounded border p-2" name="description" />
         </div>
 
         {/* Dynamic AssignedTo */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Assigned To</label>
+          <label className="mb-1 block font-semibold" htmlFor="assignedTo">Assigned To</label>
           {assignedTo.map((person, index) => (
             <div key={index} className="mb-2 flex items-center">
               <input
                 type="text"
                 className="mr-2 flex-1 rounded border p-2"
                 placeholder="Assigned to"
+                name="assignedTo"
               />
               <button
                 type="button"
@@ -83,68 +85,75 @@ const TaskForm: React.FC = () => {
 
         {/* Role */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Role</label>
+          <label className="mb-1 block font-semibold" htmlFor="role">Role</label>
           <input
             type="text"
             onChange={(e) => setRole(e.target.value)}
             className="w-full rounded border p-2"
+            name="role"
           />
         </div>
 
         {/* Priority */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Priority</label>
+          <label className="mb-1 block font-semibold" htmlFor="priority">Priority</label>
           <input
             type="text"
             onChange={(e) => setPriority(e.target.value)}
             className="w-full rounded border p-2"
+            name="priority"
           />
         </div>
 
         {/* Status */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Status</label>
+          <label className="mb-1 block font-semibold" htmlFor="status">Status</label>
           <input
             type="text"
             onChange={(e) => setStatus(e.target.value)}
             className="w-full rounded border p-2"
+            name="status"
           />
         </div>
 
         {/* Dates */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Start Date</label>
+          <label className="mb-1 block font-semibold" htmlFor="startDate">Start Date</label>
           <input
             type="date"
             onChange={(e) => setStartDate(e.target.value)}
             className="w-full rounded border p-2"
+            name="startDate"
           />
         </div>
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">End Date</label>
+          <label className="mb-1 block font-semibold" htmlFor="endDate">End Date</label>
           <input
             type="date"
             onChange={(e) => setEndDate(e.target.value)}
             className="w-full rounded border p-2"
+            name="endDate"
           />
         </div>
 
         {/* Progress */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Progress</label>
+          <label className="mb-1 block font-semibold" htmlFor="progress">Progress</label>
           <input
             type="number"
             onChange={(e) => setProgress(Number(e.target.value))}
             className="w-full rounded border p-2"
+            name="progress"
           />
         </div>
 
         {/* Remarks */}
         <div className="mb-4">
-          <label className="mb-1 block font-semibold">Remarks</label>
+          <label className="mb-1 block font-semibold" htmlFor="remarks">Remarks</label>
           <textarea
             onChange={(e) => setRemarks(e.target.value)}
             className="w-full rounded border p-2"
+            name="remarks"
           />
         </div>
 
