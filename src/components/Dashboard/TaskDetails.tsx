@@ -11,7 +11,6 @@ const task = {
   startDate: "2024-11-01",
   endDate: "2024-12-15",
   progress: 60,
-  dependencies: [2, 5],
   remarks: "Facing some delays due to API integration issues.",
 };
 
@@ -103,17 +102,6 @@ const TaskDetails = () => {
               {task.progress}%
             </span>
           </div>
-          <hr />
-          {task.dependencies && (
-            <div className="flex justify-between">
-              <span className="font-medium text-gray-600 dark:text-gray-400">
-                Dependencies:
-              </span>
-              <span className="font-semibold text-gray-900 dark:text-white">
-                {task.dependencies.join(", ")}
-              </span>
-            </div>
-          )}
           <hr />
           {task.remarks && (
             <div>

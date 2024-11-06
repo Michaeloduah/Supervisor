@@ -9,7 +9,6 @@ type TaskAssignment = {
   startDate: string;
   endDate: string;
   progress: number;
-  dependencies?: number[];
   remarks?: string;
 };
 
@@ -25,7 +24,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-01-15",
     endDate: "2024-01-30",
     progress: 60,
-    dependencies: [],
     remarks: "On track but may need additional resources.",
   },
   {
@@ -39,7 +37,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-02-01",
     endDate: "2024-02-05",
     progress: 0,
-    dependencies: [1],
   },
   {
     id: 3,
@@ -52,7 +49,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-02-06",
     endDate: "2024-02-20",
     progress: 0,
-    dependencies: [1],
   },
   {
     id: 4,
@@ -65,7 +61,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-02-10",
     endDate: "2024-02-25",
     progress: 40,
-    dependencies: [2, 3],
   },
   {
     id: 5,
@@ -78,7 +73,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-01",
     endDate: "2024-03-15",
     progress: 0,
-    dependencies: [4],
   },
   {
     id: 6,
@@ -91,7 +85,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-05",
     endDate: "2024-03-20",
     progress: 30,
-    dependencies: [5],
   },
   {
     id: 7,
@@ -104,7 +97,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-10",
     endDate: "2024-03-25",
     progress: 0,
-    dependencies: [5],
   },
   {
     id: 8,
@@ -117,7 +109,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-20",
     endDate: "2024-04-05",
     progress: 0,
-    dependencies: [6, 7],
   },
   {
     id: 9,
@@ -130,7 +121,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-25",
     endDate: "2024-04-10",
     progress: 0,
-    dependencies: [6, 7],
   },
   {
     id: 10,
@@ -143,7 +133,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-02-25",
     endDate: "2024-03-10",
     progress: 50,
-    dependencies: [5],
   },
   {
     id: 11,
@@ -156,7 +145,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-15",
     endDate: "2024-03-30",
     progress: 0,
-    dependencies: [8],
   },
   {
     id: 12,
@@ -169,7 +157,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-01",
     endDate: "2024-03-20",
     progress: 60,
-    dependencies: [5],
   },
   {
     id: 13,
@@ -182,7 +169,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-10",
     endDate: "2024-03-25",
     progress: 0,
-    dependencies: [6],
   },
   {
     id: 14,
@@ -195,7 +181,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-03-30",
     endDate: "2024-04-05",
     progress: 0,
-    dependencies: [12],
   },
   {
     id: 15,
@@ -208,7 +193,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-04-01",
     endDate: "2024-04-10",
     progress: 0,
-    dependencies: [12, 13],
   },
   {
     id: 16,
@@ -221,7 +205,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-04-05",
     endDate: "2024-04-15",
     progress: 0,
-    dependencies: [15],
   },
   {
     id: 17,
@@ -234,7 +217,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-04-12",
     endDate: "2024-04-15",
     progress: 0,
-    dependencies: [15, 16],
   },
   {
     id: 18,
@@ -247,7 +229,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-04-10",
     endDate: "2024-04-15",
     progress: 0,
-    dependencies: [17],
   },
   {
     id: 19,
@@ -260,7 +241,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-04-16",
     endDate: "2024-04-20",
     progress: 0,
-    dependencies: [17],
   },
   {
     id: 20,
@@ -273,7 +253,6 @@ const taskData: TaskAssignment[] = [
     startDate: "2024-04-18",
     endDate: "2024-04-22",
     progress: 0,
-    dependencies: [19],
   },
 ];
 export default taskData
