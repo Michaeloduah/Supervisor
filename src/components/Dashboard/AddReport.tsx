@@ -142,7 +142,7 @@ const ReportForm = () => {
 
         <button
           type="submit"
-          className="mt-4 w-full rounded bg-blue-600 p-2 text-white"
+          className="mt-4 rounded bg-[#13802a] p-2 text-white"
         >
           Submit Report
         </button>
