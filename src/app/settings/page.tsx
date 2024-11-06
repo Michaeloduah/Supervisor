@@ -12,7 +12,7 @@ const Settings = () => {
   return (
     <DefaultLayout>
       <div className="mx-auto w-full">
-        <Breadcrumb pageName="Settings" />
+        {/* <Breadcrumb pageName="Settings" /> */}
 
         <SettingBoxes />
       </div>
