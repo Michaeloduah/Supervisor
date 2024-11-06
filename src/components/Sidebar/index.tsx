@@ -31,6 +31,11 @@ const menuGroups = [
         route: "/",
       },
       {
+        icon: <GrProjects size={24} />,
+        label: "Projects",
+        route: "/projects",
+      },
+      {
         icon: <MdOutlineWorkOutline size={24} />,
         label: "Teams",
         route: "/teams",
@@ -40,19 +45,14 @@ const menuGroups = [
         // ],
       },
       {
-        icon: <GrProjects size={24} />,
-        label: "Projects",
-        route: "/projects",
+        icon: <BsListTask size={24} />,
+        label: "Tasks",
+        route: "/tasks",
       },
       {
         icon: <TbReport size={24} />,
         label: "Reports",
         route: "/reports",
-      },
-      {
-        icon: <BsListTask size={24} />,
-        label: "Tasks",
-        route: "/tasks",
       },
     ],
   },
@@ -94,7 +94,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       >
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
-          <Link href="/">
+          <Link href="/dashboard">
             <Image
               src={"/images/logo/ensg-logo.png"}
               alt="Logo"

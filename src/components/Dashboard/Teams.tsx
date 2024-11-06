@@ -156,153 +156,166 @@ const SidebarWithTeamMembers: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-3">
-      {/* Sidebar */}
-      <div className="md:p-6">
-        <div className="sticky top-30">
-          <h2 className="mb-5 text-lg font-medium text-[#13802a] dark:text-white">
-            Projects
-          </h2>
-          <ul className="text-md text-black">
-            {(Object.keys(teamData) as Array<Project>) // Cast the keys to Project[]
-              .map((category) => (
-                <li key={category}>
-                  <button
-                    onClick={() => handleCategoryClick(category)}
-                    className={`my-2 block w-full rounded-lg p-4 text-left text-lg font-medium text-[#13802a] dark:text-white ${
-                      selectedCategory === category
-                        ? "bg-white bg-opacity-90 dark:bg-gray-700"
-                        : ""
-                    }`}
-                  >
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </button>
-                </li>
-              ))}
-          </ul>
-        </div>
+    <>
+      <div className="flex items-center justify-between">
+        <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
+          Teams
+        </h1>
+
+        <button className="rounded-full bg-[#13802a] px-2 py-3 font-medium text-white transition hover:bg-opacity-90">
+          Add New Team Member
+        </button>
       </div>
-
-      {/* Main content area */}
-      <div className="flex-1 md:p-8">
-        <h2 className="mb-6 flex flex-row-reverse text-lg font-semibold text-[#13802a] dark:text-white">
-          {selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)}{" "}
-        </h2>
-
-        {/* Food Items */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-          {teamData[selectedCategory]?.length > 0 ? (
-            teamData[selectedCategory].map((teamMember) => (
-              <div
-                key={teamMember.id}
-                className="rounded-lg bg-white p-6 shadow-lg dark:bg-dark"
-              >
-                {/* Image */}
-                <Image
-                  src={teamMember.imageUrl}
-                  alt={teamMember.fullName}
-                  className="mb-4 h-[100px] w-auto rounded-lg object-cover"
-                />
-
-                {/* Team Name */}
-                <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-                  {teamMember.fullName}
-                </h3>
-
-                {/* Price */}
-                <p className="mb-4 text-lg text-gray-900 dark:text-white">
-                  {teamMember.role}
-                </p>
-
-                {/* Action Icons: View, Edit, Delete */}
-                <div className="flex justify-between">
-                  <button
-                    className="text-blue-600"
-                    onClick={() => handleViewDetails(teamMember)}
-                  >
-                    <FaEye size={20} />
-                  </button>
-                  <Link href={`/teams/${teamMember.id}`}>
-                    <button className="text-green-600">
-                      <FaEdit size={20} />
-                    </button>
-                  </Link>
-                  <button className="text-[#dc2626]">
-                    <FaTrash size={20} />
-                  </button>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="text-lg text-gray-600">
-              No team member available in this project.
-            </p>
-          )}
-        </div>
-      </div>
-
-      {/* Modal for viewing food details */}
-      {isModalOpen && selectedMember && (
-        <div className="fixed inset-0 top-10 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50 md:top-24">
-          <div className="mx-3 w-full max-w-lg rounded-lg bg-white p-8 shadow-lg dark:bg-dark">
-            {/* Close button */}
-            <button
-              className="relative left-[100%] text-2xl text-[#dc2626]"
-              onClick={handleCloseModal}
-            >
-              &times;
-            </button>
-
-            {/* Food Image */}
-            <Image
-              src={selectedMember.imageUrl}
-              alt={selectedMember.fullName}
-              className="mb-4 h-[100px] w-auto rounded-lg object-cover"
-            />
-
-            {/* Food Name */}
-            <h2 className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
-              {selectedMember.fullName}
+      <div className="flex gap-3">
+        <div className="flex items-center justify-between"></div>
+        {/* Sidebar */}
+        <div className="md:p-6">
+          <div className="sticky top-30">
+            <h2 className="mb-5 text-lg font-medium text-[#13802a] dark:text-white">
+              Projects
             </h2>
-
-            {/* Role */}
-            <p className="mb-4 text-lg text-gray-900 dark:text-white">
-              Role: {selectedMember.role}
-            </p>
-
-            {/* Responsibilities */}
-            <p className="text-md font-bold text-gray-900 dark:text-white">
-              Responsibilities: {selectedMember.responsibilities}
-            </p>
-
-            {/* Contact */}
-            <p className="text-md font-bold text-gray-900 dark:text-white">
-              Contact: {selectedMember.contact}
-            </p>
-
-            {/* Start Date */}
-            <p className="text-md font-bold text-gray-900 dark:text-white">
-              Start Date: {selectedMember.startDate}
-            </p>
-
-            {/* End Date */}
-            <p className="text-md font-bold text-gray-900 dark:text-white">
-              End Date: {selectedMember.endDate}
-            </p>
-
-            {/* Close button */}
-            <div className="mt-6 flex justify-end">
-              <button
-                className="rounded-lg bg-[#dc2626] px-4 py-2 text-white hover:bg-[#dc2626]"
-                onClick={handleCloseModal}
-              >
-                Close
-              </button>
-            </div>
+            <ul className="text-md text-black">
+              {(Object.keys(teamData) as Array<Project>) // Cast the keys to Project[]
+                .map((category) => (
+                  <li key={category}>
+                    <button
+                      onClick={() => handleCategoryClick(category)}
+                      className={`my-2 block w-full rounded-lg p-4 text-left text-lg font-medium text-[#13802a] dark:text-white ${
+                        selectedCategory === category
+                          ? "bg-white bg-opacity-90 dark:bg-gray-700"
+                          : ""
+                      }`}
+                    >
+                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                    </button>
+                  </li>
+                ))}
+            </ul>
           </div>
         </div>
-      )}
-    </div>
+
+        {/* Main content area */}
+        <div className="flex-1 md:p-8">
+          <h2 className="mb-6 flex flex-row-reverse text-lg font-semibold text-[#13802a] dark:text-white">
+            {selectedCategory.charAt(0).toUpperCase() +
+              selectedCategory.slice(1)}{" "}
+          </h2>
+
+          {/* Food Items */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+            {teamData[selectedCategory]?.length > 0 ? (
+              teamData[selectedCategory].map((teamMember) => (
+                <div
+                  key={teamMember.id}
+                  className="rounded-lg bg-white p-6 shadow-lg dark:bg-dark"
+                >
+                  {/* Image */}
+                  <Image
+                    src={teamMember.imageUrl}
+                    alt={teamMember.fullName}
+                    className="mb-4 h-[100px] w-auto rounded-lg object-cover"
+                  />
+
+                  {/* Team Name */}
+                  <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+                    {teamMember.fullName}
+                  </h3>
+
+                  {/* Price */}
+                  <p className="mb-4 text-lg text-gray-900 dark:text-white">
+                    {teamMember.role}
+                  </p>
+
+                  {/* Action Icons: View, Edit, Delete */}
+                  <div className="flex justify-between">
+                    <button
+                      className="text-blue-600"
+                      onClick={() => handleViewDetails(teamMember)}
+                    >
+                      <FaEye size={20} />
+                    </button>
+                    <Link href={`/teams/${teamMember.id}`}>
+                      <button className="text-green-600">
+                        <FaEdit size={20} />
+                      </button>
+                    </Link>
+                    <button className="text-[#dc2626]">
+                      <FaTrash size={20} />
+                    </button>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-lg text-gray-600">
+                No team member available in this project.
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Modal for viewing food details */}
+        {isModalOpen && selectedMember && (
+          <div className="fixed inset-0 top-10 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50 md:top-24">
+            <div className="mx-3 w-full max-w-lg rounded-lg bg-white p-8 shadow-lg dark:bg-dark">
+              {/* Close button */}
+              <button
+                className="relative left-[100%] text-2xl text-[#dc2626]"
+                onClick={handleCloseModal}
+              >
+                &times;
+              </button>
+
+              {/* Food Image */}
+              <Image
+                src={selectedMember.imageUrl}
+                alt={selectedMember.fullName}
+                className="mb-4 h-[100px] w-auto rounded-lg object-cover"
+              />
+
+              {/* Food Name */}
+              <h2 className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
+                {selectedMember.fullName}
+              </h2>
+
+              {/* Role */}
+              <p className="mb-4 text-lg text-gray-900 dark:text-white">
+                Role: {selectedMember.role}
+              </p>
+
+              {/* Responsibilities */}
+              <p className="text-md font-bold text-gray-900 dark:text-white">
+                Responsibilities: {selectedMember.responsibilities}
+              </p>
+
+              {/* Contact */}
+              <p className="text-md font-bold text-gray-900 dark:text-white">
+                Contact: {selectedMember.contact}
+              </p>
+
+              {/* Start Date */}
+              <p className="text-md font-bold text-gray-900 dark:text-white">
+                Start Date: {selectedMember.startDate}
+              </p>
+
+              {/* End Date */}
+              <p className="text-md font-bold text-gray-900 dark:text-white">
+                End Date: {selectedMember.endDate}
+              </p>
+
+              {/* Close button */}
+              <div className="mt-6 flex justify-end">
+                <button
+                  className="rounded-lg bg-[#dc2626] px-4 py-2 text-white hover:bg-[#dc2626]"
+                  onClick={handleCloseModal}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
