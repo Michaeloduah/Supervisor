@@ -6,6 +6,12 @@ import Image1 from "../../../public/images/report/report1.png";
 import Image2 from "../../../public/images/report/report2.png";
 import Image3 from "../../../public/images/report/report3.png";
 
+interface ImageData {
+  id: number;
+  url: string | StaticImageData;
+  description: string;
+}
+
 const report = {
   id: 1,
   projectId: 1,
@@ -20,14 +26,17 @@ const report = {
   progress: 50,
   images: [
     {
+      id: 1,
       url: Image1,
       description: "Overview of construction site progress",
     },
     {
+      id: 2,
       url: Image2,
       description: "Close-up of completed road section",
     },
     {
+      id: 3,
       url: Image3,
       description: "Inspection team on-site",
     },
@@ -35,6 +44,18 @@ const report = {
 };
 
 const ReportDetailsPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
+
+  const openModal = (image: ImageData) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
   return (
     <>
       <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
@@ -118,11 +139,12 @@ const ReportDetailsPage = () => {
             <span className="font-medium text-gray-600 dark:text-gray-400">
               Images:
             </span>
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {report.images.map((image, index) => (
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-3">
+              {report.images.map((image) => (
                 <div
-                  key={index}
-                  className="relative h-64 w-full overflow-hidden rounded-lg shadow-md"
+                  key={image.id}
+                  className="relative h-64 w-full cursor-pointer overflow-hidden rounded-lg shadow-md"
+                  onClick={() => openModal(image)}
                 >
                   <Image
                     src={image.url}
@@ -138,6 +160,40 @@ const ReportDetailsPage = () => {
               ))}
             </div>
           </div>
+
+          {/* Modal Popup */}
+          {isModalOpen && selectedImage && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <div className="relative w-4/5 max-w-3xl rounded-lg bg-white p-6 dark:bg-gray-800">
+                <div className="flex justify-end">
+                  <button
+                    className="rounded-full text-3xl text-red-500 hover:text-red-600"
+                    onClick={closeModal}
+                  >
+                    ✕
+                  </button>
+                </div>
+                <Image
+                  src={selectedImage.url}
+                  alt={selectedImage.description}
+                  width={700}
+                  height={500}
+                  className="rounded-lg"
+                />
+                <p className="mt-4 text-center text-gray-900 dark:text-white">
+                  {selectedImage.description}
+                </p>
+                <div className="flex justify-end">
+                  <button
+                    className="rounded-full text-2xl font-bold text-red-500 hover:text-red-600"
+                    onClick={closeModal}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           <hr />
           <div>
             <span className="font-medium text-gray-600 dark:text-gray-400">
