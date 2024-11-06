@@ -1,21 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-
-const reportData = [
-  {
-    id: 1,
-    projectId: 1,
-    title: "Quarterly Progress Report - Q1 2024",
-    description: "Summary of the project's progress, challenges, and budget expenditure for Q1.",
-    author: "John Doe",
-    department: "Department of Urban Development",
-    submissionDate: "2024-04-15",
-    reportType: "Progress Report",
-    status: "Reviewed",
-    progress: 50,
-  },
-  // Add more reports here
-];
+import reportData from "@/data/reports"
 
 const Reports = () => {
   const [searchTerm, setSearchTerm] = useState("");

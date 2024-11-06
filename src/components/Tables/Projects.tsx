@@ -1,55 +1,7 @@
 import { useState } from "react";
 import { PROJECT } from "@/types/project";
 import Link from "next/link";
-
-const projectData: PROJECT[] = [
-  {
-    "id": 1,
-    "name": "Road Construction",
-    "department": "Ministry of Road",
-    "budget": "1,000,000,000",
-    "location": "Enugu-Anambra Express Road",
-    "status": "In Progress",
-    "date": "10th November 2024"
-  },
-  {
-    "id": 2,
-    "name": "School Renovation",
-    "department": "Ministry of Education",
-    "budget": "500,000,000",
-    "location": "Central District High School",
-    "status": "Completed",
-    "date": "5th January 2024"
-  },
-  {
-    "id": 3,
-    "name": "Public Health Center Upgrade",
-    "department": "Ministry of Health",
-    "budget": "750,000,000",
-    "location": "Northside Community Health Center",
-    "status": "Pending",
-    "date": "15th March 2024"
-  },
-  {
-    "id": 4,
-    "name": "Water Treatment Plant Expansion",
-    "department": "Ministry of Water Resources",
-    "budget": "1,200,000,000",
-    "location": "Riverdale Treatment Facility",
-    "status": "In Progress",
-    "date": "22nd June 2024"
-  },
-  {
-    "id": 5,
-    "name": "Electric Grid Modernization",
-    "department": "Ministry of Energy",
-    "budget": "2,500,000,000",
-    "location": "Eastern Province",
-    "status": "Scheduled",
-    "date": "30th December 2024"
-  }
-]
-
+import projectData from "@/data/project";
 
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState("");

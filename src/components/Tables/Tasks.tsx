@@ -1,52 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-
-// Define the TaskAssignment type
-type TaskAssignment = {
-  id: number;
-  title: string;
-  description: string;
-  assignedTo: string;
-  role: string;
-  priority: "High" | "Medium" | "Low";
-  status: "Not Started" | "In Progress" | "Completed" | "On Hold";
-  startDate: string;
-  endDate: string;
-  progress: number;
-  dependencies?: number[];
-  remarks?: string;
-};
-
-// Sample task data
-const taskData: TaskAssignment[] = [
-  {
-    id: 1,
-    title: "Prepare Project Plan",
-    description: "Outline the project scope, objectives, and milestones.",
-    assignedTo: "Jane Doe",
-    role: "Project Manager",
-    priority: "High",
-    status: "In Progress",
-    startDate: "2024-01-15",
-    endDate: "2024-01-30",
-    progress: 60,
-    dependencies: [],
-    remarks: "On track but may need additional resources.",
-  },
-  {
-    id: 2,
-    title: "Site Survey",
-    description: "Conduct a survey of the project location to assess requirements.",
-    assignedTo: "John Smith",
-    role: "Civil Engineer",
-    priority: "Medium",
-    status: "Not Started",
-    startDate: "2024-02-01",
-    endDate: "2024-02-05",
-    progress: 0,
-    dependencies: [1],
-  },
-];
+import taskData from "@/data/tasks";
 
 const Tasks = () => {
   const [searchTerm, setSearchTerm] = useState("");
