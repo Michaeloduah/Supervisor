@@ -29,6 +29,7 @@ type TeamMember = {
   startDate: string;
   endDate?: string;
   imageUrl: string | StaticImport;
+  payment: string;
 };
 
 // Sample data: Projects and team members
@@ -44,6 +45,7 @@ const teamData = {
       startDate: "2024-01-15",
       endDate: "2025-12-30",
       imageUrl: TeamImage1, // replace with actual image
+      payment: "200,000"
     },
     {
       id: 2,
@@ -54,6 +56,7 @@ const teamData = {
       availability: "Full-time",
       startDate: "2024-01-15",
       imageUrl: TeamImage2,
+      payment: "200,000"
     },
   ],
   "Urban Green Space Initiative": [
@@ -67,6 +70,7 @@ const teamData = {
       startDate: "2024-03-01",
       endDate: "2024-12-31",
       imageUrl: TeamImage3,
+      payment: "200,000"
     },
     {
       id: 4,
@@ -77,6 +81,7 @@ const teamData = {
       availability: "Consultant",
       startDate: "2024-04-15",
       imageUrl: TeamImage4,
+      payment: "200,000"
     },
   ],
   "Transportation Network Expansion": [
@@ -90,6 +95,7 @@ const teamData = {
       startDate: "2024-05-10",
       endDate: "2025-05-10",
       imageUrl: TeamImage5,
+      payment: "200,000"
     },
     {
       id: 6,
@@ -101,6 +107,7 @@ const teamData = {
       availability: "Full-time",
       startDate: "2024-06-20",
       imageUrl: TeamImage6,
+      payment: "200,000"
     },
   ],
   "Digital Infrastructure Upgrade": [
@@ -115,6 +122,7 @@ const teamData = {
       startDate: "2024-02-01",
       endDate: "2024-12-01",
       imageUrl: TeamImage7,
+      payment: "200,000"
     },
     {
       id: 8,
@@ -125,6 +133,7 @@ const teamData = {
       availability: "Full-time",
       startDate: "2024-02-15",
       imageUrl: TeamImage8,
+      payment: "200,000"
     },
   ],
 };
@@ -162,9 +171,11 @@ const SidebarWithTeamMembers: React.FC = () => {
           Teams
         </h1>
 
+        <Link href="/teams/new">
         <button className="rounded-full bg-[#13802a] px-2 py-3 font-medium text-white transition hover:bg-opacity-90">
           Add New Team Member
         </button>
+        </Link>
       </div>
       <div className="flex gap-3">
         <div className="flex items-center justify-between"></div>
@@ -272,7 +283,7 @@ const SidebarWithTeamMembers: React.FC = () => {
                 className="mb-4 h-[100px] w-auto rounded-lg object-cover"
               />
 
-              {/* Food Name */}
+              {/* Full Name */}
               <h2 className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
                 {selectedMember.fullName}
               </h2>
@@ -285,6 +296,11 @@ const SidebarWithTeamMembers: React.FC = () => {
               {/* Responsibilities */}
               <p className="text-md font-bold text-gray-900 dark:text-white">
                 Responsibilities: {selectedMember.responsibilities}
+              </p>
+
+              {/* Payment */}
+              <p className="text-md font-bold text-gray-900 dark:text-white">
+                Payment: {selectedMember.payment}
               </p>
 
               {/* Contact */}

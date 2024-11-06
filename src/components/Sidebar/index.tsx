@@ -28,7 +28,7 @@ const menuGroups = [
       {
         icon: <TbSmartHome size={24} />,
         label: "Dashboard",
-        route: "/",
+        route: "/dashboard",
       },
       {
         icon: <GrProjects size={24} />,

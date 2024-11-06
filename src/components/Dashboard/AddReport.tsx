@@ -23,7 +23,7 @@ const ReportForm = () => {
   return (
     <>
       <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
-        Edit Task Detail
+        Add New Report
       </h2>
       <form className="mx-auto rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
         <div className="mb-4">
@@ -101,7 +101,7 @@ const ReportForm = () => {
               <div className="mb-2">
                 <label className="mb-1 block">Image URL</label>
                 <input
-                  type="url"
+                  type="file"
                   className="w-full rounded border p-2"
                   placeholder="Image URL"
                   value={image.url}
