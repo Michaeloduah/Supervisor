@@ -1,16 +1,37 @@
+"use client";
+import { SetStateAction, useState } from "react";
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+import Image1 from "../../../public/images/report/report1.png";
+import Image2 from "../../../public/images/report/report2.png";
+import Image3 from "../../../public/images/report/report3.png";
 
 const report = {
   id: 1,
   projectId: 1,
   title: "Quarterly Progress Report - Q1 2024",
-  description: "Summary of the project's progress, challenges, and budget expenditure for Q1.",
+  description:
+    "Summary of the project's progress, challenges, and budget expenditure for Q1.",
   author: "John Doe",
   department: "Department of Urban Development",
   submissionDate: "2024-04-15",
   reportType: "Progress Report",
   status: "Reviewed",
   progress: 50,
+  images: [
+    {
+      url: Image1,
+      description: "Overview of construction site progress",
+    },
+    {
+      url: Image2,
+      description: "Close-up of completed road section",
+    },
+    {
+      url: Image3,
+      description: "Inspection team on-site",
+    },
+  ],
 };
 
 const ReportDetailsPage = () => {
@@ -91,6 +112,31 @@ const ReportDetailsPage = () => {
             <span className="font-semibold text-gray-900 dark:text-white">
               {report.progress}%
             </span>
+          </div>
+          <hr />
+          <div>
+            <span className="font-medium text-gray-600 dark:text-gray-400">
+              Images:
+            </span>
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {report.images.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative h-64 w-full overflow-hidden rounded-lg shadow-md"
+                >
+                  <Image
+                    src={image.url}
+                    alt={image.description}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                  <p className="absolute bottom-2 left-2 bg-black bg-opacity-50 px-2 py-1 text-xs font-medium text-white">
+                    {image.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
           <hr />
           <div>
