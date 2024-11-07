@@ -84,15 +84,6 @@ const ReportForm = () => {
           />
         </div>
 
-        <div className="mb-4">
-          <label className="mb-1 block">Status</label>
-          <select className="w-full rounded border p-2">
-            <option value="Reviewed">Reviewed</option>
-            <option value="Pending">Pending</option>
-            <option value="Draft">Draft</option>
-          </select>
-        </div>
-
         {/* Dynamic Image Fields */}
         <div className="mb-4">
           <h3 className="mb-2 font-semibold">Images</h3>
