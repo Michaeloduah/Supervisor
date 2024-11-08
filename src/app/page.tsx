@@ -14,7 +14,7 @@ const SignIn: React.FC = () => {
   return (
     <>
       <div className="rounded-[10px] shadow-1 dark:bg-gray-dark dark:shadow-card">
-        <div className="grid grid-cols-2 flex-wrap items-center h-screen">
+        <div className="grid lg:grid-cols-2 flex-wrap items-center h-screen">
           <div className="hidden w-full xl:block">
             <div className="my-auto overflow-hidden rounded-2xl dark:!bg-dark-2 dark:bg-none">
               <Link
@@ -46,7 +46,7 @@ const SignIn: React.FC = () => {
             </div>
           </div>
           <div className="w-full">
-            <div className="w-full p-4 sm:p-12.5 xl:p-15">
+            <div className="w-full p-4">
               <Signin />
             </div>
           </div>

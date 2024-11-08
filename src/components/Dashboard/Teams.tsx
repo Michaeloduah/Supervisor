@@ -166,13 +166,13 @@ const SidebarWithTeamMembers: React.FC = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-5">
         <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
           Teams
         </h1>
 
         <Link href="/teams/new">
-        <button className="rounded-full bg-[#13802a] px-2 py-3 font-medium text-white transition hover:bg-opacity-90">
+        <button className="rounded-full bg-[#13802a] px-2 py-3 text-xs font-medium text-white transition hover:bg-opacity-90">
           Add New Team Member
         </button>
         </Link>
@@ -180,7 +180,7 @@ const SidebarWithTeamMembers: React.FC = () => {
       <div className="flex gap-3">
         <div className="flex items-center justify-between"></div>
         {/* Sidebar */}
-        <div className="md:p-6">
+        <div className="md:p-6 w-2/5">
           <div className="sticky top-30">
             <h2 className="mb-5 text-lg font-medium text-[#13802a] dark:text-white">
               Projects
@@ -191,7 +191,7 @@ const SidebarWithTeamMembers: React.FC = () => {
                   <li key={category}>
                     <button
                       onClick={() => handleCategoryClick(category)}
-                      className={`my-2 block w-full rounded-lg p-4 text-left text-lg font-medium text-[#13802a] dark:text-white ${
+                      className={`my-2 block w-full rounded-lg p-4 text-left lg:text-lg text-sm font-medium text-[#13802a] dark:text-white ${
                         selectedCategory === category
                           ? "bg-white bg-opacity-90 dark:bg-gray-700"
                           : ""
@@ -206,14 +206,14 @@ const SidebarWithTeamMembers: React.FC = () => {
         </div>
 
         {/* Main content area */}
-        <div className="flex-1 md:p-8">
+        <div className="flex-1">
           <h2 className="mb-6 flex flex-row-reverse text-lg font-semibold text-[#13802a] dark:text-white">
             {selectedCategory.charAt(0).toUpperCase() +
               selectedCategory.slice(1)}{" "}
           </h2>
 
           {/* Food Items */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
             {teamData[selectedCategory]?.length > 0 ? (
               teamData[selectedCategory].map((teamMember) => (
                 <div

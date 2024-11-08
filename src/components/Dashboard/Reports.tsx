@@ -6,13 +6,13 @@ import ReportTable from "../Tables/Reports";
 const Reports: React.FC = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-5">
         <h1 className="mb-1.5 text-heading-6 font-bold text-dark dark:text-white">
           Reports
         </h1>
 
         <Link href="/reports/new">
-          <button className="rounded-full bg-[#13802a] px-2 py-3 font-medium text-white transition hover:bg-opacity-90">
+          <button className="rounded-full bg-[#13802a] px-2 py-3 text-xs font-medium text-white transition hover:bg-opacity-90">
             Add New Report
           </button>
         </Link>
